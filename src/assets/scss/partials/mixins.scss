@@ -1,9 +1,10 @@
 @use 'variables' as *;
 
-@mixin default-color {
-    color: $mainColor;
+@mixin simple-ul {
+    margin: 0;
+    list-style: none;
 }
 
-@mixin default-bg-color {
-    background-color: $mainColor;
+@mixin simple-li {
+    padding: 0 15px;
 }
