@@ -20,9 +20,19 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faPhone } from '@fortawesome/free-solid-svg-icons'
 import { faClock} from '@fortawesome/free-solid-svg-icons'
 import { faUser } from '@fortawesome/free-regular-svg-icons'
+import { faGem } from '@fortawesome/free-regular-svg-icons'
 
 /* add icons to the library */
-library.add(faFacebookF, faTwitter, faLinkedinIn, faEnvelope, faPhone, faClock, faUser)
+library.add(
+    faFacebookF, 
+    faTwitter, 
+    faLinkedinIn, 
+    faEnvelope, 
+    faPhone, 
+    faClock, 
+    faUser,
+    faGem
+)
 
 
 createApp(App)
