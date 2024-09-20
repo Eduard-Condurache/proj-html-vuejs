@@ -5,13 +5,13 @@ export default {
 
 <template>
   <div class="jumbotron">
-    <div class="container">
-      <nav class="d-flex justify-content-between">
+    <div class="container-jumbotron">
+      <nav class="d-flex justify-content-between align-items-center">
         <a href="#">
           <img src="../../assets/img/logo.svg" alt="logo">
         </a>
 
-        <ul class="d-flex">
+        <ul class="d-flex align-items-center">
           <li>
             <a href="#">
               HOME
@@ -44,14 +44,14 @@ export default {
 
           <li>
             <a href="#">
-              ICON
+              <font-awesome-icon icon="fa-regular fa-user" />
             </a>
           </li>
 
           <li>
             <a href="#">
-              <button>
-                X
+              <button class="my-btn btn-bluelagoon">
+                get in touch
               </button>
             </a>
           </li>
@@ -59,7 +59,7 @@ export default {
       </nav>
 
       <div class="main-content">
-        <div>
+        <div class="my-blue-color">
           <h5>
             LOGISTICS SERVICES
           </h5>
@@ -67,12 +67,12 @@ export default {
         
         <div>
           <h1>
-            CARGO <br>
+            CARGO
             TRANSPORT
           </h1>
         </div>
         
-        <div>
+        <div class="pt-3 pb-5 my-grey-color">
           <h5>
             Fractional or exclusive road cargo trasnportation
             to all regions with small, medium and large vehicles.
@@ -80,8 +80,8 @@ export default {
         </div>
 
         <div>
-          <button>ab</button>
-          <button>da</button>
+          <button class="my-btn btn-bluelagoon">get in touch</button>
+          <button class="my-btn btn-noborder ms-4">read more</button>
         </div>
       </div>
     </div>
@@ -91,6 +91,8 @@ export default {
 <style lang="scss" scoped>
 @use '../../assets/scss/partials/mixins.scss' as *;
 @use '../../assets/scss/partials/colors.scss' as *;
+@use '../../assets/scss/main.scss' as *;
+@use '../../assets/scss/buttons-style.scss' as *;
 
 .jumbotron {
   max-width: 100%;
@@ -111,7 +113,9 @@ export default {
     z-index: 1;
   }
 
-  .container {
+  .container-jumbotron {
+    max-width: 1250px;
+    margin: 0 auto;
     position: relative;
     z-index: 2;
 
@@ -138,9 +142,22 @@ export default {
     }
 
     .main-content {
-      width: 40%;
+      width: 570px;
       margin: 150px 0;
       color: white;
+
+      .my-blue-color {
+        color: $blueChill;
+      }
+
+      .my-grey-color {
+        color: $silverSand;
+      }
+
+      h1 {
+        font-size: 4.5rem;
+        font-weight: bold;
+      }
     }
   }
 }

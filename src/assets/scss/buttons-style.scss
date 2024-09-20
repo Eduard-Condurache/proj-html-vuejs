@@ -1,0 +1,26 @@
+@use 'partials/variables' as *;
+@use 'partials/mixins' as *;
+@use 'partials/colors' as *;
+
+ /* DEFAULT BUTTON */
+  
+.my-btn {
+    padding: 8px 24px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    border: none;
+    font-weight: bold;
+    color: white;
+}
+
+// COLORS 
+
+.btn-bluelagoon {
+    background-color: $blueLagoon;
+    border: 1px solid $blueLagoon;
+}
+
+.btn-noborder {
+    border: 1px solid $blueChill;
+    background: none;
+}
