@@ -103,7 +103,7 @@ export default {
   color: white;
 
   .text-overlay {
-    background-color: $smaitBlue;
+    background-color: rgba($blueLagoon, 0.2);
     color: white;
   }
 

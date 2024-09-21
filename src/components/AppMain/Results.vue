@@ -2,7 +2,24 @@
 export default {
   data() {
     return { 
-     
+     results: [
+        {
+          text: 'Certifications',
+          number: '128',
+        },
+        {
+          text: 'Employess',
+          number: '230',
+        },
+        {
+          text: 'Customers',
+          number: '517',
+        },
+        {
+          text: 'Countries Served',
+          number: '94',
+        }
+     ]
     }
   }
 }
@@ -11,15 +28,33 @@ export default {
 <template>
   <div class="results">
     <div class="container">
-      <div class="row">
-        <div class="col-7">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia vitae voluptatem minima nisi omnis facilis adipisci ullam iste iusto tempora temporibus commodi quasi reprehenderit accusamus nulla ab odit deserunt quae corporis excepturi, officiis, fuga quaerat sapiente! Architecto dolor eveniet nostrum.
+      <div class="text-center">
+        <div>
+          <h6>
+            WHAT ARE WE DOING
+          </h6>
         </div>
 
-        <div class="col-5">
-          <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus similique unde magni nulla quibusdam ea, necessitatibus nobis porro modi consequatur eum voluptates qui amet perferendis nisi perspiciatis dolorem suscipit harum deleniti at facere illum. Perspiciatis totam illo labore beatae rerum blanditiis libero itaque, voluptatum vel et. Voluptates illum aliquid nam?
-          </div>
+        <div>
+          <h1 class="my-4">
+            <span class="text-overlay m-0">
+              Results
+            </span> 
+            <span>
+              in Numbers
+            </span>
+          </h1>
+        </div>
+      </div>
+
+      <div class="d-flex align-items-center justify-content-around pt-5">
+        <div v-for="(result,index) in results" :key="index" class="text-center">
+          <h2>
+            {{ result.number }}
+          </h2>
+          <h3>
+            {{ result.text }}
+          </h3>
         </div>
       </div>
     </div>
@@ -29,9 +64,27 @@ export default {
 <style lang="scss" scoped>
 @use '../../assets/scss/partials/mixins.scss' as *;
 @use '../../assets/scss/partials/colors.scss' as *;
+@use '../../assets/scss/text-style.scss' as *;
+@use '../../assets/scss/main.scss' as *;
+@use '../../assets/scss/buttons-style.scss' as *;
 .results {
-  padding: 100px 0;
-  background-color: $shark;
+  padding: 150px 0;
+  width: 100%;
   color: white;
+  background-position: center;
+  background-size: cover;
+  background-image: url(../../assets/img/bg-10.jpg);
+  background-attachment: fixed;
+
+  .text-overlay {
+    color: white;
+    background-color: rgba($blueLagoon, 0.2);
+  }
+
+  h2 {
+    color: $blueChill;
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
 }
 </style>
