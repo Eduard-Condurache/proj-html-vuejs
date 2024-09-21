@@ -27,6 +27,7 @@ import { faBoxesStacked } from '@fortawesome/free-solid-svg-icons'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { faQuoteRight } from '@fortawesome/free-solid-svg-icons'
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
+import { faAngleRight } from '@fortawesome/free-solid-svg-icons'
 
 /* add icons to the library */
 library.add(
@@ -43,7 +44,8 @@ library.add(
     faBoxesStacked,
     faArrowRight,
     faQuoteRight,
-    faLocationDot
+    faLocationDot,
+    faAngleRight
 )
 
 

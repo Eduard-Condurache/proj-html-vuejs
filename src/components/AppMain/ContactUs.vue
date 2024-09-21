@@ -156,22 +156,8 @@ export default {
     color: $midGray;
   }
 
-  ul {
-    @include simple-ul;
-    padding: 0;
-
-    li {
-      @include simple-li;
-      padding: 0;
-
-      a {
-        text-decoration: none;
-        color: $blueChill;
-        display: flex;
-        align-items: center;
-        margin: 20px 0;
-      }
-    }
+  a {
+      color: $blueChill;
   }
 
   .icon {

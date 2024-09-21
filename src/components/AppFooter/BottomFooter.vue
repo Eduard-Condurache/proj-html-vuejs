@@ -13,15 +13,7 @@ export default {
   <div class="bottom-footer">
     <div class="container">
       <div class="row">
-        <div class="col-7">
-          ciao
-        </div>
-
-        <div class="col-5">
-          <div>
-            ciao
-          </div>
-        </div>
+        
       </div>
     </div>
   </div>
@@ -33,7 +25,7 @@ export default {
 
 .bottom-footer {
   padding: 20px;
-  background-color: $midGray;
+  background-color: $shark;
   color: white;
 }
 </style>
