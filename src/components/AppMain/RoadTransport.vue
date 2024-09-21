@@ -2,23 +2,23 @@
 export default {
   data() {
     return { 
-     cards: [
-      {
-        title: 'Technology',
-        desc: "We are continually focused on developing technology solutions adapted to our client's needs.",
-        logo: 'fa-solid fa-truck-ramp-box',
-      },
-      {
-        title: 'Reefer Cargo',
-        desc: "Regular and frequent monitoring from the receipt of the loaded container to final destination.",
-        logo: 'fa-solid fa-temperature-low'
-      },
-      {
-        title: 'Dry Cargo',
-        desc: "We work with most types of dry cargo, from valuable cargo to the most dangerous requiring care.",
-        logo: 'fa-solid fa-boxes-stacked'
-      }
-     ]
+      cards: [
+        {
+          title: 'Technology',
+          desc: "We are continually focused on developing technology solutions adapted to our client's needs.",
+          logo: 'fa-solid fa-truck-ramp-box',
+        },
+        {
+          title: 'Reefer Cargo',
+          desc: "Regular and frequent monitoring from the receipt of the loaded container to final destination.",
+          logo: 'fa-solid fa-temperature-low'
+        },
+        {
+          title: 'Dry Cargo',
+          desc: "We work with most types of dry cargo, from valuable cargo to the most dangerous requiring care.",
+          logo: 'fa-solid fa-boxes-stacked'
+        }
+      ]
     }
   }
 }

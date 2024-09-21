@@ -25,6 +25,7 @@ import { faTruckRampBox } from '@fortawesome/free-solid-svg-icons/faTruckRampBox
 import { faTemperatureLow } from '@fortawesome/free-solid-svg-icons'
 import { faBoxesStacked } from '@fortawesome/free-solid-svg-icons'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
+import { faQuoteRight } from '@fortawesome/free-solid-svg-icons'
 
 /* add icons to the library */
 library.add(
@@ -39,7 +40,8 @@ library.add(
     faTruckRampBox,
     faTemperatureLow,
     faBoxesStacked,
-    faArrowRight
+    faArrowRight,
+    faQuoteRight
 )
 
 

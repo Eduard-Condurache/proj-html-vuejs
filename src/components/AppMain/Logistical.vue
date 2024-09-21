@@ -38,7 +38,7 @@ export default {
   <div class="logistical">
     <div class="container">
       <!-- TOP PART -->
-      <div class="logi-container text-center">
+      <div class="my-container text-center">
         <div>
           <h6>
             HOW IT WORKS IN PRACTICE
@@ -97,11 +97,6 @@ export default {
 .logistical {
   padding: 100px 0;
   background-color: #EEF4ED;
-
-  .logi-container {
-    width: 58%;
-    margin: 0 auto;
-  }
 
   p {
     color: $midGray;
