@@ -21,6 +21,10 @@ import { faPhone } from '@fortawesome/free-solid-svg-icons'
 import { faClock} from '@fortawesome/free-solid-svg-icons'
 import { faUser } from '@fortawesome/free-regular-svg-icons'
 import { faGem } from '@fortawesome/free-regular-svg-icons'
+import { faTruckRampBox } from '@fortawesome/free-solid-svg-icons/faTruckRampBox'
+import { faTemperatureLow } from '@fortawesome/free-solid-svg-icons'
+import { faBoxesStacked } from '@fortawesome/free-solid-svg-icons'
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
 /* add icons to the library */
 library.add(
@@ -31,7 +35,11 @@ library.add(
     faPhone, 
     faClock, 
     faUser,
-    faGem
+    faGem,
+    faTruckRampBox,
+    faTemperatureLow,
+    faBoxesStacked,
+    faArrowRight
 )
 
 

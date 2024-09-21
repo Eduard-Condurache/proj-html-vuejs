@@ -23,7 +23,7 @@ export default {
 
           <div>
             <h1 class="d-flex align-items-center">
-              <span class="diamond-title">
+              <span class="text-overlay">
                 <font-awesome-icon icon="fa-regular fa-gem" />
                 Excellence
               </span> 
@@ -173,10 +173,7 @@ export default {
   margin: 100px 0;
 
   p, li {
-    font-size: 1.1rem;
     color: $midGray;
-    padding: 0;
-    margin: 0;
   }
 
   h1 {
@@ -184,12 +181,9 @@ export default {
     font-weight: 900;
     margin: 20px 0;
 
-    .diamond-title {
+    .text-overlay {
       background-color: rgba($bermuda, 0.5);
-      padding: 7px 10px;
-      margin-right: 8px;
       color: $blueChill;
-      border-radius: 5px;
     }
   }
 

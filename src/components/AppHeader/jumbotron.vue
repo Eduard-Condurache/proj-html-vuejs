@@ -96,7 +96,7 @@ export default {
 
 .jumbotron {
   max-width: 100%;
-  height: 869px;
+  height: 100vh;
   position: relative;
   background-image: url("../../assets/img/bg-9.jpg");
   background-size:cover;
