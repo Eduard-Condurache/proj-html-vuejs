@@ -4,7 +4,6 @@ import RoadTransport from './RoadTransport.vue';
 import Logistical from './Logistical.vue';
 import Results from './Results.vue';
 import Feedback from './Feedback.vue';
-import Units from './Units.vue';
 import ContactUs from './ContactUs.vue'
 export default {
   data() {
@@ -18,7 +17,6 @@ export default {
     Logistical,
     Results,
     Feedback,
-    Units,
     ContactUs
   }
 }
@@ -31,7 +29,6 @@ export default {
     <Logistical />
     <Results />
     <feedback />
-    <Units />
     <ContactUs />
   </main>
 </template>
