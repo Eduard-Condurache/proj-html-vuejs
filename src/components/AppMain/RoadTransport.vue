@@ -31,7 +31,7 @@ export default {
       <div class="row">
         <div class="col-8">
           <div>
-            <h6 class="text-bluechill fw-bold">
+            <h6>
               ROAD TRANSPORT
             </h6>
           </div>
@@ -104,12 +104,9 @@ export default {
 
   .text-overlay {
     background-color: $smaitBlue;
+    color: white;
   }
 
-  h1 {
-    font-size: 3rem;
-    font-weight: 900;
-  }
   .card {
     h3 {
       color: white;

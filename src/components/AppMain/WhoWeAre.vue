@@ -16,18 +16,20 @@ export default {
         <!-- LEFT PART -->
         <div class="col-7 px-3">
           <div>
-            <h6 class="text-bluechill fw-bold">
+            <h6>
               WHO WE ARE
             </h6>
           </div>
 
           <div>
-            <h1 class="d-flex align-items-center">
+            <h1 class="d-flex align-items-center my-4">
               <span class="text-overlay">
                 <font-awesome-icon icon="fa-regular fa-gem" />
                 Excellence
               </span> 
-              in Transport
+              <span>
+                in Transport
+              </span>
             </h1>
           </div>
 
@@ -174,17 +176,6 @@ export default {
 
   p, li {
     color: $midGray;
-  }
-
-  h1 {
-    font-size: 3rem;
-    font-weight: 900;
-    margin: 20px 0;
-
-    .text-overlay {
-      background-color: rgba($bermuda, 0.5);
-      color: $blueChill;
-    }
   }
 
   .quote-box {

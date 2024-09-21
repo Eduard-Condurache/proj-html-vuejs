@@ -26,4 +26,21 @@ p, li {
     background-color: #19191F;
 }
 
+h1 {
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+h6 {
+    color: $blueChill;
+    font-weight: bold;
+}
+
+.text-overlay {
+    background-color: $bermuda; 
+    color: $blueChill;
+    padding: 5px 20px;
+    display: inline-block;
+}
+
 
