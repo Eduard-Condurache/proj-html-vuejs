@@ -3,11 +3,6 @@ import InfoBar from './InfoBar.vue';
 import jumbotron from './jumbotron.vue';
 
 export default {
-  data() {
-    return { 
-     
-    }
-  },
   components: {
     InfoBar,
     jumbotron

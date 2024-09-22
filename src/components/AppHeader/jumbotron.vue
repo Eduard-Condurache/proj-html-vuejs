@@ -1,5 +1,16 @@
 <script>
 export default {
+  data () {
+    return {
+      nav: [
+        'home',
+        'about',
+        'services',
+        'process',
+        'testimonials',
+      ] 
+    }
+  },
 }
 </script>
 
@@ -12,39 +23,15 @@ export default {
         </a>
 
         <ul class="d-flex align-items-center">
-          <li>
+          <li v-for="(link, index) in nav" :key="index">
             <a href="#">
-              HOME
+              {{ link }}
             </a>
           </li>
 
           <li>
             <a href="#">
-              ABOUT
-            </a>
-          </li>
-
-          <li>
-            <a href="#">
-              SERVICES
-            </a>
-          </li>
-
-          <li>
-            <a href="#">
-              PROCESS
-            </a>
-          </li>
-
-          <li>
-            <a href="#">
-              TESTIMONIALS
-            </a>
-          </li>
-
-          <li>
-            <a href="#">
-              <font-awesome-icon icon="fa-regular fa-user" />
+              <font-awesome-icon class="arrow-icon" icon="fa-regular fa-user" />
             </a>
           </li>
 
@@ -91,8 +78,9 @@ export default {
 <style lang="scss" scoped>
 @use '../../assets/scss/partials/mixins.scss' as *;
 @use '../../assets/scss/partials/colors.scss' as *;
-@use '../../assets/scss/main.scss' as *;
+@use '../../assets/scss/general.scss' as *;
 @use '../../assets/scss/buttons-style.scss' as *;
+@use '../../assets/scss/partials/variables.scss' as *;
 
 .jumbotron {
   max-width: 100%;
@@ -108,7 +96,7 @@ export default {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background: rgba(14, 14, 14, 0.7);
     opacity: 1;
     z-index: 1;
   }
@@ -122,24 +110,26 @@ export default {
     nav {
       padding-top: 20px;
       img {
-      max-width: 100%;
       width: 150px;
       }
 
-      ul {
-      @include simple-ul;
+      li {
+        @include simple-li;
 
-        li {
-          @include simple-li;
+        a {
+          color: $silverSand;
+          font-size: 1.1rem;
+          font-weight: 500;
+          text-transform: uppercase;
 
-          a {
-            text-decoration: none;
-            color: white;
-            font-size: 1.3rem;
+          &:hover {
+            color: $blueChill;
+            transition: 0.3s ease-in-out;
           }
         }
       }
     }
+
 
     .main-content {
       width: 570px;
@@ -156,7 +146,7 @@ export default {
 
       h1 {
         font-size: 4.5rem;
-        font-weight: bold;
+        font-weight: 900;
       }
     }
   }

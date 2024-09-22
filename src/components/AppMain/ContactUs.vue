@@ -103,7 +103,7 @@ export default {
           </p>
 
           <ul>
-            <li v-for="(item,index) in list" :key="index">
+            <li v-for="(item,index) in list" :key="index" class="mb-2">
               <a href="#">
                 <div class="icon me-3">
                   <font-awesome-icon :icon="item.icon"/>
@@ -130,9 +130,9 @@ export default {
 <style lang="scss" scoped>
 @use '../../assets/scss/partials/mixins.scss' as *;
 @use '../../assets/scss/partials/colors.scss' as *;
-@use '../../assets/scss/text-style.scss' as *;
-@use '../../assets/scss/main.scss' as *;
+@use '../../assets/scss/general.scss' as *;
 @use '../../assets/scss/buttons-style.scss' as *;
+@use '../../assets/scss/partials/variables.scss' as *;
 .contact-us {
   padding: 100px 0;
 

@@ -64,9 +64,9 @@ export default {
 <style lang="scss" scoped>
 @use '../../assets/scss/partials/mixins.scss' as *;
 @use '../../assets/scss/partials/colors.scss' as *;
-@use '../../assets/scss/text-style.scss' as *;
-@use '../../assets/scss/main.scss' as *;
+@use '../../assets/scss/general.scss' as *;
 @use '../../assets/scss/buttons-style.scss' as *;
+@use '../../assets/scss/partials/variables.scss' as *;
 .results {
   padding: 150px 0;
   width: 100%;

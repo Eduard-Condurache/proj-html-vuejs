@@ -24,6 +24,6 @@ export default {
 </template>
 
 <style lang="scss">
-@use 'assets/scss/main' as *;
+@use 'assets/scss/general.scss' as *;
 @import "bootstrap/scss/bootstrap";
 </style>

@@ -6,11 +6,6 @@ import Results from './Results.vue';
 import Feedback from './Feedback.vue';
 import ContactUs from './ContactUs.vue'
 export default {
-  data() {
-    return { 
-     
-    }
-  },
   components: {
     WhoWeAre,
     RoadTransport,

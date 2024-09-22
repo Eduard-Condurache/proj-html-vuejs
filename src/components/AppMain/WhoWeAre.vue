@@ -2,7 +2,31 @@
 export default {
   data() {
     return { 
-     
+     types: [
+      {
+        title: 'Light',
+        img: 'truck-1.png',
+        desc: 'Max Weight 1200kg'
+      },
+      {
+        title: 'Medium',
+        img: 'truck-1.png',
+        desc: 'Max Weight 6000kg'
+      },
+      {
+        title: 'Heavy',
+        img: 'truck-1.png',
+        desc: 'Max Weight 24000kg'
+      }
+     ]
+    }
+  },
+  methods: {
+    getImagePath: function(img) {
+      const url = new URL(`../../assets/img/${img}`, import.meta.url);
+
+      const link = url.href
+      return link
     }
   }
 }
@@ -11,10 +35,10 @@ export default {
 <template>
   <div class="who-we-are">
     <div class="container">
-      <div class="row">
+      <div class="row d-flex justify-content-center">
 
         <!-- LEFT PART -->
-        <div class="col-7 px-3">
+        <div class="col-8 me-5">
           <div>
             <h6>
               WHO WE ARE
@@ -24,11 +48,11 @@ export default {
           <div>
             <h1 class="d-flex align-items-center my-4">
               <span class="text-overlay">
-                <font-awesome-icon icon="fa-regular fa-gem" />
+                <font-awesome-icon icon="fa-regular fa-gem"/>
                 Excellence
               </span> 
-              <span>
-                in Transport
+              <span class="ms-2">
+                 in Transport
               </span>
             </h1>
           </div>
@@ -56,11 +80,11 @@ export default {
               Sed Mauris nulla, tempor eu est vel, dapibus hendrerit mauris curabitur dctum pharetra
             </p>
 
-            <ul class="mt-4 p-0">
+            <ul class="mt-4 ps-3">
               <li>Lorem ipsum dolor sit amet</li>
               <li>Consectetur adipiscing elit</li>
               <li>Integer melstie lorem at massa</li>
-              <li> facilisis in pretium nisl aliquet</li>
+              <li>Facilisis in pretium nisl aliquet</li>
               <li>Dapibus hendrerit mauris curabitur</li>
             </ul>
 
@@ -75,72 +99,25 @@ export default {
             </h3>
             
             <div>
-              <div class="row">
-                <div class="col-3">
+              <div v-for="(item, index) in types" :key="index" class="row">
+                <div class="col-4">
                   <div class="truck-container">
-                    <img src="../../assets/img/truck-1.png" alt="truck-1">
+                    <img :src="getImagePath(item.img)" alt="truck">
                   </div>
                 </div>
 
-                <div class="col-9">
+                <div class="col-8">
                   <div>
                     <h3>
-                      Light
+                      {{ item.title }}
                     </h3>
                   </div>
 
                   <p>
-                    Max Weight 1200kg
+                    {{ item.desc }}
                   </p>
                 </div>
-              </div>
-            </div>
-
-            <hr>
-
-            <div class="my-4">
-              <div class="row">
-                <div class="col-3">
-                  <div class="truck-container">
-                    <img src="../../assets/img/truck-1.png" alt="truck-1">
-                  </div>
-                </div>
-
-                <div class="col-9">
-                  <div>
-                    <h3>
-                      Medium
-                    </h3>
-                  </div>
-
-                  <p>
-                    Max Weight 6000kg
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <hr>
-
-            <div>
-              <div class="row">
-                <div class="col-3">
-                  <div class="truck-container">
-                    <img src="../../assets/img/truck-1.png" alt="truck-1">
-                  </div>
-                </div>
-
-                <div class="col-9">
-                  <div>
-                    <h3>
-                      Heavy
-                    </h3>
-                  </div>
-
-                  <p>
-                    Max Weight 6000kg
-                  </p>
-                </div>
+                <hr class="my-3">
               </div>
             </div>
           </div>
@@ -168,8 +145,9 @@ export default {
 <style lang="scss" scoped>
 @use '../../assets/scss/partials/mixins.scss' as *;
 @use '../../assets/scss/partials/colors.scss' as *;
-@use '../../assets/scss/text-style.scss' as *;
-@use '../../assets/scss/main.scss' as *;
+@use '../../assets/scss/general.scss' as *;
+@use '../../assets/scss/buttons-style.scss' as *;
+@use '../../assets/scss/partials/variables.scss' as *;
 
 .who-we-are {
   margin: 100px 0;
@@ -188,7 +166,7 @@ export default {
   }
 
   hr {
-    width: 60%;
+    width: 80%;
   }
 
   .truck-container {
@@ -202,8 +180,17 @@ export default {
     background-color: white;
     box-shadow: 1em 1em 1em 0.2em rgb(0 0 0 / 10%);
     margin-right: 35px;
-    width: 25%;
+    width: 35%;
+  }
+
+  ul {
+    list-style: circle;
+
+    li {
+      line-height: 2rem;
+    }
   }
 }
+
 
 </style>

@@ -1,6 +1,7 @@
-@use 'partials/variables' as *;
 @use 'partials/mixins' as *;
 @use 'partials/colors' as *;
+
+// General
 
 img {
     max-width: 100%;
@@ -9,16 +10,7 @@ img {
 .my-container {
     width: 58%;
     margin: 0 auto;
-  }
-
-// General
-
-.text-overlay {
-    padding: 5px 10px;
-    margin-right: 8px;
-    border-radius: 3px;
 }
-
 
 p, li {
     font-size: 1.1rem;
@@ -60,8 +52,12 @@ ul {
         text-decoration: none;
         display: flex;
         align-items: center;
-        margin: 20px 0;
         color: white;
+
+        &:hover {
+            color: $blueChill;
+            transition: 0.2s ease-in-out;
+        }
       }
     }
   }
