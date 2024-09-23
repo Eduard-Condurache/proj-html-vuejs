@@ -161,5 +161,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-
+  main > * {
+    padding: 100px 0;
+  }
 </style>

@@ -127,7 +127,6 @@ export default {
 <style lang="scss" scoped>
 
 .who-we-are {
-  margin: 100px 0;
 
   p, li {
     color: $midGray;

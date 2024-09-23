@@ -19,8 +19,9 @@ p, li {
     margin: 0;
 }
 
-.bg-woodsmoke-light {
-    background-color: #19191F;
+.card {
+    background-color: $woodSmokeLight;
+    cursor: pointer;
 }
 
 h1 {
@@ -38,6 +39,10 @@ h6 {
     color: $blueChill;
     padding: 5px 20px;
     display: inline-block;
+}
+
+.logo img {
+    width: 150px;
 }
 
 ul {
@@ -62,4 +67,13 @@ ul {
     }
   }
 
+// CARDS EFFECT
+
+.card {
+    transition: transform 0.4s ease;
+    
+    &:hover {
+        transform: translateY(-10px);
+    }
+}
 

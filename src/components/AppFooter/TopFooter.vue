@@ -18,7 +18,7 @@ export default {
     <div class="container">
       <div class="row">
         <div class="col-3">
-          <a href="#">
+          <a href="#" class="logo">
             <img src="../../assets/img/logo.svg" alt="logo">
           </a>
 
@@ -79,10 +79,6 @@ export default {
   padding: 100px 0;
   background-color: $woodSmoke;
   color: white;
-
-  img {
-    width: 150px;
-  }
 
   a {
     color: $silverSand;

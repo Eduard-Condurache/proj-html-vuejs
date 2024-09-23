@@ -15,7 +15,7 @@ export default {
   <div class="jumbotron">
     <div class="container-jumbotron">
       <nav class="d-flex justify-content-between align-items-center">
-        <a href="#">
+        <a href="#" class="logo">
           <img src="../../assets/img/logo.svg" alt="logo">
         </a>
 
@@ -43,10 +43,10 @@ export default {
       </nav>
 
       <div class="main-content">
-        <div class="my-blue-color">
-          <h5>
+        <div>
+          <h6>
             {{ mainTitle }}
-          </h5>
+          </h6>
         </div>
         
         <div>
@@ -55,7 +55,7 @@ export default {
           </h1>
         </div>
         
-        <div class="pt-3 pb-5 my-grey-color">
+        <div class="pt-3 pb-5">
           <h5>
             {{ description }}
           </h5>
@@ -99,10 +99,7 @@ export default {
 
     nav {
       padding-top: 20px;
-      img {
-      width: 150px;
-      }
-
+      
       li {
         @include simple-li;
 
@@ -120,17 +117,12 @@ export default {
       }
     }
 
-
     .main-content {
       width: 570px;
       margin: 150px 0;
       color: white;
 
-      .my-blue-color {
-        color: $blueChill;
-      }
-
-      .my-grey-color {
+      h5 {
         color: $silverSand;
       }
 
@@ -141,5 +133,4 @@ export default {
     }
   }
 }
-
 </style>

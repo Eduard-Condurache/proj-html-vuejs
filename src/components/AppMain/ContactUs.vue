@@ -38,6 +38,8 @@ export default {
             </p>
           </div>
 
+          <!-- FORM -->
+
           <form class="row pe-5">
             <div class="col-md-6">
               <label for="name" class="form-label"></label>
@@ -74,6 +76,8 @@ export default {
               <button type="submit" class="my-btn btn-bluelagoon">SEND</button>
             </div>
           </form>
+
+          <!-- /FORM -->
         </div>
 
         <!-- RIGHT PART -->
@@ -118,7 +122,6 @@ export default {
 <style lang="scss" scoped>
 
 .contact-us {
-  padding: 100px 0;
 
   p {
     color: $midGray;
@@ -134,9 +137,7 @@ export default {
     color: $midGray;
   }
 
-  input::placeholder,
-  text::placeholder,
-  textarea::placeholder {
+  *::placeholder {
     color: $midGray;
   }
 

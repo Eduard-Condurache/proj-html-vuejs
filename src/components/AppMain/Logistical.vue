@@ -61,9 +61,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-
 .logistical {
-  padding: 100px 0;
   background-color: #EEF4ED;
 
   p {

@@ -75,7 +75,6 @@ export default {
 <style lang="scss" scoped>
 
 .road-transport {
-  padding: 100px 0;
   background-color: $woodSmoke;
   color: white;
 
@@ -99,6 +98,5 @@ export default {
       width: 40px;
     }
   }
-
 }
 </style>

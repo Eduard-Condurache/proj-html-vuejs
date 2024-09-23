@@ -42,9 +42,7 @@ nav {
     a {
       color: $silverSand;
       font-size: 1rem;
-
     }
-
   }
 }
 </style>

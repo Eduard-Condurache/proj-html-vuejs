@@ -71,7 +71,6 @@ export default {
 <style lang="scss" scoped>
 
 .feedback {
-  padding: 100px 0;
   background-color: $woodSmoke;
   color: white;
 

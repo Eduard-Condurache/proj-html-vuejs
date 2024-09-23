@@ -45,7 +45,6 @@ export default {
 <style lang="scss" scoped>
 
 .results {
-  padding: 150px 0;
   width: 100%;
   color: white;
   background-position: center;
