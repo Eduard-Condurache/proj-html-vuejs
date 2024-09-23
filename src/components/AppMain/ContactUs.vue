@@ -1,21 +1,9 @@
 <script>
+import { store } from '../../store.js'
 export default {
-  data() {
-    return { 
-     list: [
-      {
-        icon: 'fa-solid fa-phone',
-        text: '+1 (305) 1234-5678'
-      },
-      {
-        icon: 'fa-solid fa-envelope',
-        text: 'hello@example.com'
-      },
-      {
-        icon: 'fa-solid fa-location-dot',
-        text: 'Main Avenue, 987'
-      }
-     ]
+  data () {
+    return {
+      store
     }
   }
 }
@@ -103,7 +91,7 @@ export default {
           </p>
 
           <ul>
-            <li v-for="(item,index) in list" :key="index" class="mb-2">
+            <li v-for="(item,index) in store.contactlist" :key="index" class="mb-2">
               <a href="#">
                 <div class="icon me-3">
                   <font-awesome-icon :icon="item.icon"/>
@@ -117,7 +105,7 @@ export default {
           </ul>
 
           <div>
-            <button class="my-btn btn-noborder">
+            <button class="my-btn btn-noborder mt-3">
                 VIEW MAP
             </button>
           </div>

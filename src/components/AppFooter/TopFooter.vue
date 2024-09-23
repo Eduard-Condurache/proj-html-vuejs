@@ -1,8 +1,13 @@
 <script>
+import { store } from '../../store.js'
 
 export default {
+  data () {
+    return {
+      store
+    }
+  },
   props: {
-    contactlist: Array,
     cardlist: Array
   }
 }
@@ -24,7 +29,7 @@ export default {
           </div>
 
           <ul>
-            <li v-for="(item, index) in contactlist" :key="index">
+            <li v-for="(item, index) in store.contactlist" :key="index">
               <a href="#">
                 <div class="icon me-3">
                   <font-awesome-icon :icon="item.icon"/>

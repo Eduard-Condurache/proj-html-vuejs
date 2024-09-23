@@ -1,35 +1,7 @@
 <script>
 export default {
-  data() {
-    return { 
-     steps: [
-      {
-        nr: '01',
-        title: 'Collection of information',
-        text: 'lorem ipsum dolor sit amet consectetur.'
-      },
-      {
-        nr: '02',
-        title: 'Service Invoice Sending',
-        text: 'lorem ipsum dolor sit amet consectetur.'
-      },
-      {
-        nr: '03',
-        title: 'Withdrawal of Cargo',
-        text: 'lorem ipsum dolor sit amet consectetur.'
-      },
-      {
-        nr: '04',
-        title: 'Transport Customer Order',
-        text: 'lorem ipsum dolor sit amet consectetur.'
-      },
-      {
-        nr: '05',
-        title: 'Successful Delivery',
-        text: 'lorem ipsum dolor sit amet consectetur.'
-      },
-     ]
-    }
+  props: {
+    steps: Array
   }
 }
 </script>

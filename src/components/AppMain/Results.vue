@@ -1,26 +1,7 @@
 <script>
 export default {
-  data() {
-    return { 
-     results: [
-        {
-          text: 'Certifications',
-          number: '128',
-        },
-        {
-          text: 'Employess',
-          number: '230',
-        },
-        {
-          text: 'Customers',
-          number: '517',
-        },
-        {
-          text: 'Countries Served',
-          number: '94',
-        }
-     ]
-    }
+  props: {
+    results: Array
   }
 }
 </script>

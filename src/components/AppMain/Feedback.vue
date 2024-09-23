@@ -1,48 +1,7 @@
 <script>
 export default {
-  data() {
-    return { 
-      cards: [
-        {
-          title: 'WooCommerce',
-          img: 'logo-1.png',
-          desc: "Praesent volutpat justo sit amet elmentum malesuada. Praesent sagittis augue" +
-                "justo, in accumsan orci rhoncus at pellentesque.",
-          botdesc: "Lorem ipsum dolor sit amet, consectetur adpiscing elit.",
-          icon: 'fa-solid fa-truck-ramp-box',
-        },
-        {
-          title: 'WordPress',
-          img: 'logo-2.png',
-          desc: "Praesent volutpat justo sit amet elmentum malesuada. Praesent sagittis augue" +
-                "justo, in accumsan orci rhoncus at pellentesque.",
-          botdesc: "Lorem ipsum dolor sit amet, consectetur adpiscing elit.",
-          icon: 'fa-solid fa-temperature-low'
-        },
-        {
-          title: 'Pingdom',
-          img: 'logo-3.png',
-          desc: "Praesent volutpat justo sit amet elmentum malesuada. Praesent sagittis augue" +
-                "justo, in accumsan orci rhoncus at pellentesque.",
-          botdesc: "Lorem ipsum dolor sit amet, consectetur adpiscing elit.",
-          icon: 'fa-solid fa-boxes-stacked'
-        },
-        // {
-        //   img: 'logo-4.png',
-        //   desc: "Praesent volutpat justo sit amet elmentum malesuada. Praesent sagittis augue" +
-        //         "justo, in accumsan orci rhoncus at pellentesque.",
-        //   botdesc: "Lorem ipsum dolor sit amet, consectetur adpiscing elit.",
-        //   icon: 'fa-solid fa-boxes-stacked'
-        // },
-        // {
-        //   img: 'logo-5.png',
-        //   desc: "Praesent volutpat justo sit amet elmentum malesuada. Praesent sagittis augue" +
-        //         "justo, in accumsan orci rhoncus at pellentesque.",
-        //   botdesc: "Lorem ipsum dolor sit amet, consectetur adpiscing elit.",
-        //   icon: 'fa-solid fa-boxes-stacked'
-        // }
-      ]
-    }
+  props: {
+    trusted: Array
   },
   methods: {
     getImagePath: function(img) {
@@ -80,14 +39,14 @@ export default {
         <div>
           <p>
             We work intensively in search of ideals that can add up in the lives of
-            our customers. This is what moves us and we are grateful ofr the recognition.
+            our customers. This is what moves us and we are grateful of the recognition.
           </p>
         </div>
       </div>
 
       <!-- Bottom part -->
       <div class="row d-flex align-items-center justify-content-between my-5">
-        <div v-for="(card, index) in cards" :key="index" class="card col mx-3 bg-woodsmoke-light p-4">
+        <div v-for="(card, index) in trusted" :key="index" class="card col mx-3 bg-woodsmoke-light p-4">
           <div class="card-body">
             <div class="mb-4">
               <img :src="getImagePath(card.img)" :alt="card.title">

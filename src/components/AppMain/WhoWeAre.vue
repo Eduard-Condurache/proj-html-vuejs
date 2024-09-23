@@ -1,25 +1,7 @@
 <script>
 export default {
-  data() {
-    return { 
-     types: [
-      {
-        title: 'Light',
-        img: 'truck-1.png',
-        desc: 'Max Weight 1200kg'
-      },
-      {
-        title: 'Medium',
-        img: 'truck-1.png',
-        desc: 'Max Weight 6000kg'
-      },
-      {
-        title: 'Heavy',
-        img: 'truck-1.png',
-        desc: 'Max Weight 24000kg'
-      }
-     ]
-    }
+  props: {
+    trucks: Array
   },
   methods: {
     getImagePath: function(img) {
@@ -99,7 +81,7 @@ export default {
             </h3>
             
             <div>
-              <div v-for="(item, index) in types" :key="index" class="row">
+              <div v-for="(item, index) in trucks" :key="index" class="row">
                 <div class="col-4">
                   <div class="truck-container">
                     <img :src="getImagePath(item.img)" alt="truck">
