@@ -1,27 +1,8 @@
 <script>
 export default {
-  data () {
-    return {
-      contacts: [
-        {
-          icon: 'fa-solid fa-phone',
-          text: '+1 (305) 1234-5678'
-        },
-        {
-          icon: 'fa-solid fa-envelope',
-          text: 'hello@example.com'
-        },
-        {
-          icon: 'fa-brands fa-facebook-f'
-        },
-        {
-          icon: 'fa-brands fa-twitter'
-        },
-        {
-          icon: 'fa-brands fa-linkedin-in',
-        }
-      ]
-    }
+  props: {
+    contacts: Array,
+    openHours: String
   }
 }
 </script>
@@ -31,9 +12,9 @@ export default {
     <div class="container">
       <ul>
         <li>
-          <a href="">
+          <a href="#">
             <font-awesome-icon icon="fa-solid fa-clock" class="me-2"/>
-            Open Hours: Mon - Sat - 9:00 - 18.00
+            {{ openHours }}
           </a>
         </li>
       </ul>

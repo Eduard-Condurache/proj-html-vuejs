@@ -1,16 +1,13 @@
 <script>
 export default {
-  data () {
-    return {
-      nav: [
-        'home',
-        'about',
-        'services',
-        'process',
-        'testimonials',
-      ] 
-    }
-  },
+  props: {
+    navLinks: Array,
+    mainTitle: String,
+    subTitle: String,
+    description: String,
+    button1: String,
+    button2: String,
+  }
 }
 </script>
 
@@ -23,7 +20,7 @@ export default {
         </a>
 
         <ul class="d-flex align-items-center">
-          <li v-for="(link, index) in nav" :key="index">
+          <li v-for="(link, index) in navLinks" :key="index">
             <a href="#">
               {{ link }}
             </a>
@@ -38,7 +35,7 @@ export default {
           <li>
             <a href="#">
               <button class="my-btn btn-bluelagoon">
-                get in touch
+                {{ button1 }}
               </button>
             </a>
           </li>
@@ -48,27 +45,25 @@ export default {
       <div class="main-content">
         <div class="my-blue-color">
           <h5>
-            LOGISTICS SERVICES
+            {{ mainTitle }}
           </h5>
         </div>
         
         <div>
           <h1>
-            CARGO
-            TRANSPORT
+            {{ subTitle }}
           </h1>
         </div>
         
         <div class="pt-3 pb-5 my-grey-color">
           <h5>
-            Fractional or exclusive road cargo trasnportation
-            to all regions with small, medium and large vehicles.
+            {{ description }}
           </h5>
         </div>
 
         <div>
-          <button class="my-btn btn-bluelagoon">get in touch</button>
-          <button class="my-btn btn-noborder ms-4">read more</button>
+          <button class="my-btn btn-bluelagoon">{{ button1 }}</button>
+          <button class="my-btn btn-noborder ms-4">{{button2 }}</button>
         </div>
       </div>
     </div>
