@@ -61,11 +61,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use '../../assets/scss/partials/mixins.scss' as *;
-@use '../../assets/scss/partials/colors.scss' as *;
-@use '../../assets/scss/general.scss' as *;
-@use '../../assets/scss/buttons-style.scss' as *;
-@use '../../assets/scss/partials/variables.scss' as *;
+
 .logistical {
   padding: 100px 0;
   background-color: #EEF4ED;

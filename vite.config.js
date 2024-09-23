@@ -8,9 +8,10 @@ export default defineConfig({
     preprocessorOptions: {
       scss: {
         additionalData: `
-          // @use 'src/assets/scss/partials/reset' as *;
-          @use 'src/assets/scss/partials/variables' as *;
           @use 'src/assets/scss/partials/mixins' as *;
+          @use 'src/assets/scss/partials/colors' as *;
+          @use 'src/assets/scss/general' as *;
+          @use 'src/assets/scss/buttons-style' as *;
         `
       }
     }
