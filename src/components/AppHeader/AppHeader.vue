@@ -1,6 +1,6 @@
 <script>
 import InfoBar from './InfoBar.vue';
-import jumbotron from './jumbotron.vue';
+import jumbotron from './Jumbotron.vue';
 
 export default {
   data () {

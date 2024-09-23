@@ -87,7 +87,7 @@ export default {
 
       <!-- Bottom part -->
       <div class="row d-flex align-items-center justify-content-between my-5">
-        <div v-for="(card, index) in cards" :key="index" class="card col-12 col-md mx-3 bg-woodsmoke-light p-4">
+        <div v-for="(card, index) in cards" :key="index" class="card col mx-3 bg-woodsmoke-light p-4">
           <div class="card-body">
             <div class="mb-4">
               <img :src="getImagePath(card.img)" :alt="card.title">
