@@ -1,10 +1,45 @@
 <script>
+import { errorMessages } from 'vue/compiler-sfc';
 import { store } from '../../store.js'
 export default {
   data () {
     return {
-      store
+      store,
+
+      formInfo : {
+        name: '',
+        email: '',
+        number: '',
+        message: '',
+        subject: '',
+        textarea: ''
+      },
+
+      errorMessage: ''
     }
+  },
+  methods: {
+    handleSubmit() {
+      this.errorMessage = '';
+
+      const phoneNumber = this.formInfo.number.toString();
+
+      if (this.formInfo.name &&
+          this.formInfo.email &&
+          phoneNumber.length >= 9 &&
+          this.formInfo.textarea &&
+          this.formInfo.subject) {
+
+          console.log('Name:', this.formInfo.name);
+          console.log('Email:', this.formInfo.email);
+          console.log('Phone Number:', this.formInfo.number);
+          console.log('Subject:', this.formInfo.subject);
+          console.log('Message:', this.formInfo.textarea);
+        } 
+      else {
+        this.errorMessage = 'Il numero di telefono deve essere di almeno 9 numeri'
+      }
+    },
   }
 }
 </script>
@@ -40,26 +75,26 @@ export default {
 
           <!-- FORM -->
 
-          <form class="row pe-5">
+          <form @submit.prevent="handleSubmit()" class="row pe-5">
             <div class="col-md-6">
               <label for="name" class="form-label"></label>
-              <input type="text" class="form-control m-0" placeholder="Name" id="name">
+              <input type="text" class="form-control m-0" placeholder="Name" id="name" required v-model="formInfo.name">
             </div>
 
             <div class="col-md-6">
               <label for="inputEmail4" class="form-label"></label>
-              <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+              <input type="email" class="form-control" id="inputEmail4" placeholder="Email" required v-model="formInfo.email">
             </div>
 
            <div class="col-md-6">
               <label for="number" class="form-label"></label>
-              <input type="number" class="form-control" placeholder="Phone" id="number">
+              <input type="number" class="form-control" placeholder="Phone" id="number" required v-model="formInfo.number">
             </div>
 
             <div class="col-md-6">
               <label for="options"></label>
-              <select class="form-select" aria-label="Default select example" id="options">
-                <option selected>More info</option>
+              <select v-model="formInfo.subject" class="form-select" aria-label="Default select example" id="options" required>
+                <option disabled value="">More options</option>
                 <option value="1">One</option>
                 <option value="2">Two</option>
                 <option value="3">Three</option>
@@ -68,7 +103,7 @@ export default {
             <div class="col-md-12">
               <div class="mb-3">
                 <label for="textarea" class="form-label"></label>
-                <textarea placeholder="Message" class="form-control" id="textarea" rows="6"></textarea>
+                <textarea placeholder="Message" class="form-control" id="textarea" rows="6" minlength="10" maxlength="100" required v-model="formInfo.textarea"></textarea>
               </div>
             </div>
             
@@ -76,6 +111,9 @@ export default {
               <button type="submit" class="my-btn btn-bluelagoon">SEND</button>
             </div>
           </form>
+          <div v-if="errorMessage" class="text-danger mt-3">
+            {{ errorMessage }}
+          </div>
 
           <!-- /FORM -->
         </div>

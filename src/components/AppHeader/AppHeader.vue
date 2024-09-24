@@ -40,8 +40,7 @@ export default {
 <template>
   <header>
     <InfoBar 
-      :contacts="contacts"
-      :openHours="openHours"/>
+      :contacts="contacts"/>
 
     <jumbotron 
       :navLinks="navLinks"
