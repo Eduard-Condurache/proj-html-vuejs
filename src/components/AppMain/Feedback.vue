@@ -1,7 +1,22 @@
 <script>
 export default {
+  data () {
+    return {
+      activeCard: 0,
+      visibleCards: 3,
+      autoplay: null
+    }
+  },
   props: {
     trusted: Array
+  },
+  mounted() {
+    this.startAutoPlay();
+  },
+  computed: {
+    cleanTrusted () {
+      return this.trusted.slice(this.activeCard, this.activeCard + this.visibleCards);
+    }
   },
   methods: {
     getImagePath: function(img) {
@@ -9,6 +24,30 @@ export default {
 
       const link = url.href
       return link
+    },
+
+    nextCard() {
+      if (this.activeCard < this.trusted.length - this.visibleCards) {
+        this.activeCard++;
+      }
+      else {
+        this.activeCard = 0;
+      }
+    },
+
+    startAutoPlay () {
+      if (this.autoplay == null) {
+        this.autoplay = setInterval(() => {
+          this.nextCard();
+        }, 3000)
+      }
+    },
+
+    stopAutoPlay() {
+      if (this.autoplay != null) {
+        clearInterval(this.autoplay);
+        this.autoplay = null;
+      }
     }
   }
 }
@@ -29,7 +68,7 @@ export default {
           <h1 class="my-4">
             <span>
               Trusted
-            </span> 
+            </span>
             <span class="text-overlay m-0">
               Feedback
             </span>
@@ -45,8 +84,10 @@ export default {
       </div>
 
       <!-- Bottom part -->
-      <div class="row d-flex align-items-center justify-content-between my-5">
-        <div v-for="(card, index) in trusted" :key="index" class="card col mx-3 bg-woodsmoke-light p-4">
+      <div class="row d-flex align-items-center justify-content-between my-5"
+        @mouseenter="stopAutoPlay()"
+        @mouseleave="startAutoPlay()">
+        <div v-for="(card, index) in cleanTrusted" :key="index" class="card col mx-3 p-3">
           <div class="card-body">
             <div class="mb-4">
               <img :src="getImagePath(card.img)" :alt="card.title">
@@ -79,8 +120,15 @@ export default {
     color: white;
   }
 
+  .container {
+    width: 100%;
+    max-width: 1350px;
+    margin: 0 auto;
+  }
+
   .card {
     position: relative;
+    height: 320px;
 
     .quote {
       position: absolute;
@@ -90,6 +138,5 @@ export default {
       color: $midGray;
     }
   }
-
 }
 </style>

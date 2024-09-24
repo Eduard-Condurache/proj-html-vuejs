@@ -125,6 +125,22 @@ export default {
           botdesc: "Lorem ipsum dolor sit amet, consectetur adpiscing elit.",
           icon: 'fa-solid fa-boxes-stacked'
         },
+        {
+          title: 'safafa',
+          img: 'logo-4.png',
+          desc: "Praesent volutpat justo sit amet elmentum malesuada. Praesent sagittis augue" +
+                "justo, in accumsan orci rhoncus at pellentesque.",
+          botdesc: "Lorem ipsum dolor sit amet, consectetur adpiscing elit.",
+          icon: 'fa-solid fa-boxes-stacked'
+        },
+        {
+          title: 'asfafafaf',
+          img: 'logo-5.png',
+          desc: "Praesent volutpat justo sit amet elmentum malesuada. Praesent sagittis augue" +
+                "justo, in accumsan orci rhoncus at pellentesque.",
+          botdesc: "Lorem ipsum dolor sit amet, consectetur adpiscing elit.",
+          icon: 'fa-solid fa-boxes-stacked'
+        },
       ]
     }
   },

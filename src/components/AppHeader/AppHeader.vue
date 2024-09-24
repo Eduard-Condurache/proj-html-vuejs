@@ -24,11 +24,7 @@ export default {
           icon: 'fa-brands fa-linkedin-in',
         }
       ],
-      openHours: 'Open Hours: Mon - Sat - 9:00 - 18.00',
       navLinks: ['home', 'about', 'services', 'process', 'testimonials'],
-      mainTitle: 'LOGISTICS SERVICES',
-      subTitle: 'CARGO TRANSPORT',
-      description: 'Fractional or exclusive road cargo transportation to all regions with small, medium, and large vehicles.',
       button1: 'get in touch',
       button2: 'read more'
 
@@ -49,9 +45,6 @@ export default {
 
     <jumbotron 
       :navLinks="navLinks"
-      :mainTitle="mainTitle"
-      :subTitle="subTitle"
-      :description="description"
       :button1="button1"
       :button2="button2"/>
   </header>

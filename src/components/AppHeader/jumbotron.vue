@@ -2,9 +2,6 @@
 export default {
   props: {
     navLinks: Array,
-    mainTitle: String,
-    subTitle: String,
-    description: String,
     button1: String,
     button2: String,
   }
@@ -45,19 +42,19 @@ export default {
       <div class="main-content">
         <div>
           <h6>
-            {{ mainTitle }}
+            LOGISTICS SERVICES 
           </h6>
         </div>
         
         <div>
           <h1>
-            {{ subTitle }}
+            CARGO TRANSPORT
           </h1>
         </div>
         
         <div class="pt-3 pb-5">
           <h5>
-            {{ description }}
+            Fractional or exclusive road cargo transportation to all regions with small, medium, and large vehicles.
           </h5>
         </div>
 

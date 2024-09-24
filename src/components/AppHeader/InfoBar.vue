@@ -2,7 +2,6 @@
 export default {
   props: {
     contacts: Array,
-    openHours: String
   }
 }
 </script>
@@ -14,7 +13,7 @@ export default {
         <li>
           <a href="#">
             <font-awesome-icon icon="fa-solid fa-clock" class="me-2"/>
-            {{ openHours }}
+            Open Hours: Mon - Sat - 9:00 - 18.00
           </a>
         </li>
       </ul>
